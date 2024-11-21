@@ -1,0 +1,41 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+}
+
+.clock {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 35vw;
+  height: 35vw;
+  border-radius: 50%;
+  background-color: red;
+  border: 8px solid black;
+}
+
+.hand {
+  position: absolute;
+  top: 2%;
+  left: 50%;
+  width: 8px;
+  height: 48%;
+  background-color: #000;
+  border-radius: 25% 50% 25% 50%;
+  transform: rotate(0deg) translateX(-50%);
+  transform-origin: 50% 100%;
+  animation: ticking 60s steps(60) both infinite;
+}
+
+@keyframes ticking {
+  0% {
+    transform: rotate(0deg) translateX(-50%);
+  }
+
+  100% {
+    transform: rotate(360deg) translateX(-50%);
+  }
+}
