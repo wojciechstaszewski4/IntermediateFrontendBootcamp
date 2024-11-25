@@ -1,0 +1,100 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+}
+
+.btn1 {
+  position: absolute;
+  top: 50%;
+  left: calc(100% / 3);
+  transform: translate(-50%, -50%);
+  font-size: 40px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 15px 30px;
+  background-color: transparent;
+  border: 5px solid black;
+  overflow: hidden;
+  color: black;
+  transition: 0.5s 0.25s ease;
+}
+
+.btn1:hover {
+  color: white;
+  cursor: pointer;
+}
+
+.btn1::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 25%;
+  top: 50%;
+  left: -100%;
+  transform: translateY(-50%);
+  background-color: black;
+  transition: left 0.25s ease, height 0.25s 0.25s ease;
+  z-index: -1;
+}
+
+.btn1:hover::before {
+  left: 0;
+  height: 100%;
+}
+
+.btn2 {
+  position: absolute;
+  top: 50%;
+  left: calc((100% / 3) * 2);
+  transform: translate(-50%, -50%);
+  font-size: 40px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 15px 30px;
+  background-color: #fff;
+  border: 5px solid black;
+  overflow: hidden;
+  color: black;
+  transition: 0.25s ease;
+}
+
+.btn2:hover {
+  cursor: pointer;
+  background-color: #ececec;
+}
+
+.btn2::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-left: 10px solid black;
+  border-top: 40px solid transparent;
+  border-bottom: 35px solid transparent;
+  transition: 0.25s ease;
+}
+
+.btn2:hover::before {
+  border-left: 25px solid black;
+}
+
+.btn2::after {
+  content: "";
+  position: absolute;
+  right: 2.5%;
+  top: 50%;
+  transform: translateY(-50%) scale(0);
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: dodgerblue;
+  transition: 0.25s ease;
+}
+
+.btn2:hover::after {
+  transform: translateY(-50%) scale(1);
+}

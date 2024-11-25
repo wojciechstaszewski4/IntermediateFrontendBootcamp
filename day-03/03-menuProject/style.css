@@ -1,0 +1,120 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  height: 300vh;
+}
+
+.wrap {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.wrap,
+nav.desktop,
+header {
+  height: 360px;
+}
+
+nav.desktop {
+  float: left;
+  width: 300px;
+}
+
+nav ul {
+  list-style: none;
+}
+
+nav.desktop a {
+  display: block;
+  line-height: 72px;
+  font-size: 22px;
+  color: #000000;
+  text-decoration: none;
+  padding: 0 5px 0 30px;
+}
+
+nav.desktop i {
+  width: 50px;
+  border-right: 2px solid #000000;
+  margin-right: 30px;
+  transition: 0.3s;
+}
+
+nav.desktop a:hover i {
+  margin-right: 50px;
+}
+
+nav.desktop a:hover {
+  color: #ffffff;
+  background-color: royalblue;
+}
+
+header {
+  float: left;
+  width: calc(100% - 300px);
+  background-image: url(piano.png);
+  background-size: cover;
+  background-position: center;
+}
+
+section {
+  margin-top: 50px;
+}
+
+section h1 {
+  font-size: 40px;
+  background-color: #333333;
+  color: #ffffff;
+  padding: 15px 0;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+nav.mobile {
+  display: none;
+}
+
+@media (max-width: 1024px) {
+  nav.desktop {
+    display: none;
+  }
+
+  nav.mobile {
+    position: fixed;
+    display: block;
+    width: 72px;
+    height: 100%;
+    background-color: #000000;
+    color: #ffffff;
+  }
+
+  nav.mobile a {
+    display: block;
+    line-height: 10vh;
+    color: #ffffff;
+    font-size: 30px;
+    text-align: center;
+  }
+
+  nav.mobile li:nth-child(1) a {
+    color: royalblue;
+  }
+
+  nav.mobile li a:hover {
+    color: orange;
+  }
+
+  header {
+    width: 100%;
+  }
+
+  section h1 {
+    font-size: 20px;
+  }
+}
